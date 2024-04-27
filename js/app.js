@@ -63,8 +63,7 @@ const incrementarCantidad = (curso) => {
       cursoElement.cantidad++;
     }
   });
-
-  console.log(carritoCursos);
+  mostrarCarrito();
 };
 
 
@@ -73,6 +72,31 @@ const incrementarCantidad = (curso) => {
 
 const agregarCurso = (curso) => {
   carritoCursos = [...carritoCursos, curso];
-
-  console.log(carritoCursos);
+  mostrarCarrito();
 }
+
+
+
+
+
+const mostrarCarrito = () => {
+
+  carritoCursos.forEach(curso => {
+    const { imagen, titulo, precio, cantidad, id } = curso;
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>
+        <img src="${imagen}" width="100">
+      </td>
+      <td>${titulo}</td>
+      <td>${precio}</td>
+      <td>${cantidad}</td>
+      <td>
+        <a href="#" class="borrar-curso" data-id="${id}">X</a>
+      </td>
+    `;
+
+    contenedorCarritoElement.appendChild(row);
+  });
+} 
