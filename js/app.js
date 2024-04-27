@@ -3,6 +3,11 @@ const carritoElement = document.querySelector('#carrito');
 const listaCursosElement = document.querySelector('#lista-cursos');
 const contenedorCarritoElement = document.querySelector('#lista-carrito tbody');
 const botonVaciarCarritoElement = document.querySelector('#vaciar-carrito');
+let carritoCursos = [];
+
+
+
+
 
 // Cargar Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +27,9 @@ const obtenerCursoElement = (event) => {
 };
 
 
+
+
+
 const crearCurso = (cursoElement) => {
 
   const curso = {
@@ -31,5 +39,26 @@ const crearCurso = (cursoElement) => {
     id: cursoElement.querySelector('a').getAttribute('data-id'),
     cantidad: 1
   };
+
+  validarAgregado(curso);
 };
 
+
+
+
+
+const validarAgregado = (curso) => {
+  const existe = carritoCursos.some(cursoElement => cursoElement.id === curso.id);
+
+  existe ? incrementarCantidad(curso) : agregarCurso(curso);
+}
+
+
+
+
+
+const agregarCurso = (curso) => {
+  carritoCursos = [...carritoCursos, curso];
+
+  console.log(carritoCursos);
+}
