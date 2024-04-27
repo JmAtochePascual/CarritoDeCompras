@@ -59,4 +59,4 @@ Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
 Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepacual.github.io/CarritoDeCompras).
 
-Todos los derechos reservados Meeti 2024 ©.
+Todos los derechos reservados Carrito de Compras 2024 ©.
