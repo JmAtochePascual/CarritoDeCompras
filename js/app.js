@@ -13,6 +13,7 @@ let carritoCursos = [];
 document.addEventListener('DOMContentLoaded', () => {
   listaCursosElement.addEventListener('click', obtenerCursoElement);
   carritoElement.addEventListener('click', EliminarCurso);
+  botonVaciarCarritoElement.addEventListener('click', vaciarCarrito);
 });
 
 
@@ -126,3 +127,12 @@ const EliminarCurso = (event) => {
     mostrarCarrito();
   }
 };
+
+
+
+
+
+const vaciarCarrito = () => {
+  carritoCursos = [];
+  mostrarCarrito();
+}
