@@ -12,6 +12,7 @@ let carritoCursos = [];
 // Cargar Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
   listaCursosElement.addEventListener('click', obtenerCursoElement);
+  carritoElement.addEventListener('click', EliminarCurso);
 });
 
 
@@ -111,3 +112,17 @@ const limpiarCarrito = () => {
     contenedorCarritoElement.removeChild(contenedorCarritoElement.firstChild);
   }
 }
+
+
+
+
+
+const EliminarCurso = (event) => {
+  event.preventDefault();
+
+  if (event.target.classList.contains('borrar-curso')) {
+    const id = event.target.getAttribute('data-id');
+    carritoCursos = carritoCursos.filter(curso => curso.id !== id);
+    mostrarCarrito();
+  }
+};
