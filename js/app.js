@@ -80,6 +80,7 @@ const agregarCurso = (curso) => {
 
 
 const mostrarCarrito = () => {
+  limpiarCarrito();
 
   carritoCursos.forEach(curso => {
     const { imagen, titulo, precio, cantidad, id } = curso;
@@ -99,4 +100,14 @@ const mostrarCarrito = () => {
 
     contenedorCarritoElement.appendChild(row);
   });
-} 
+}
+
+
+
+
+
+const limpiarCarrito = () => {
+  while (contenedorCarritoElement.firstChild) {
+    contenedorCarritoElement.removeChild(contenedorCarritoElement.firstChild);
+  }
+}
