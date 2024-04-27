@@ -57,6 +57,20 @@ const validarAgregado = (curso) => {
 
 
 
+const incrementarCantidad = (curso) => {
+  carritoCursos.forEach(cursoElement => {
+    if (cursoElement.id === curso.id) {
+      cursoElement.cantidad++;
+    }
+  });
+
+  console.log(carritoCursos);
+};
+
+
+
+
+
 const agregarCurso = (curso) => {
   carritoCursos = [...carritoCursos, curso];
 
