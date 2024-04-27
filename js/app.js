@@ -17,7 +17,19 @@ const obtenerCursoElement = (event) => {
 
   if (event.target.classList.contains('agregar-carrito')) {
     const cursoElement = event.target.parentElement.parentElement;
+    crearCurso(cursoElement);
   }
 };
 
+
+const crearCurso = (cursoElement) => {
+
+  const curso = {
+    imagen: cursoElement.querySelector('img').src,
+    titulo: cursoElement.querySelector('h4').textContent,
+    precio: cursoElement.querySelector('.precio span').textContent,
+    id: cursoElement.querySelector('a').getAttribute('data-id'),
+    cantidad: 1
+  };
+};
 
