@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   listaCursosElement.addEventListener('click', obtenerCursoElement);
   carritoElement.addEventListener('click', EliminarCurso);
   botonVaciarCarritoElement.addEventListener('click', vaciarCarrito);
+
+  obtenerCarritosStorage();
 });
 
 
@@ -102,6 +104,8 @@ const mostrarCarrito = () => {
 
     contenedorCarritoElement.appendChild(row);
   });
+
+  actualizarStorage(carritoCursos);
 }
 
 
@@ -134,5 +138,20 @@ const EliminarCurso = (event) => {
 
 const vaciarCarrito = () => {
   carritoCursos = [];
+  mostrarCarrito();
+}
+
+
+
+
+
+const actualizarStorage = (carritoCursos) => {
+  localStorage.setItem('cursos', JSON.stringify(carritoCursos));
+}
+
+
+const obtenerCarritosStorage = () => {
+  const carritos = localStorage.getItem('cursos');
+  carritoCursos = JSON.parse(carritos);
   mostrarCarrito();
 }
