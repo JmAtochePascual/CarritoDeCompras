@@ -22,12 +22,21 @@ const init = (event) => {
   // verificar si el curso ya fue agregado
   const existeCurso = verificarCurso(curso);
 
-  existeCurso ? null : agregarCurso(curso);
+  // si el curso ya fue agregado aumentar la cantidad si no agregarlo
+  existeCurso ? aumentarCantidadCurso(curso.id) : agregarCurso(curso);
+
+  console.log(listaDeCursos);
 };
 
 
 // Agregar curso al carrito
 const agregarCurso = (curso) => listaDeCursos = [...listaDeCursos, curso];
+
+
+// Aumentar cantidad de curso
+const aumentarCantidadCurso = (id) => {
+  listaDeCursos.forEach(cursoExistente => cursoExistente.id === id ? cursoExistente.cantidad++ : null);
+}
 
 
 // cargar eventos
