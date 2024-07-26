@@ -1,12 +1,3 @@
-// Variables
-const carritoElement = document.querySelector('#carrito');
-const listaCursosElement = document.querySelector('#lista-cursos');
-const contenedorCarritoElement = document.querySelector('#lista-carrito tbody');
-const botonVaciarCarritoElement = document.querySelector('#vaciar-carrito');
-let carritoCursos = [];
-
-
-
 
 
 // Cargar Event Listeners
