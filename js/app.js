@@ -4,6 +4,7 @@ import {
 } from "./elemtos.js";
 
 import {
+  listarCursos,
   obtenerCurso,
   verificarCurso,
 } from "./funciones.js";
@@ -19,13 +20,17 @@ const init = (event) => {
   // obtener curso
   const curso = obtenerCurso(event);
 
+  // si no es un curso salir
+  if (!curso) return;
+
   // verificar si el curso ya fue agregado
   const existeCurso = verificarCurso(curso);
 
   // si el curso ya fue agregado aumentar la cantidad si no agregarlo
   existeCurso ? aumentarCantidadCurso(curso.id) : agregarCurso(curso);
 
-  console.log(listaDeCursos);
+  // listar cursos en el carrito de compras 
+  listarCursos();
 };
 
 
