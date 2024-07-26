@@ -1,13 +1,6 @@
 // Importar modulos
-import {
-  listaCursosElement,
-} from "./elemtos.js";
-
-import {
-  listarCursos,
-  obtenerCurso,
-  verificarCurso,
-} from "./funciones.js";
+import { carritoElement, listaCursosElement } from "./elemtos.js";
+import { listarCursos, obtenerCurso, verificarCurso, } from "./funciones.js";
 
 
 // Variables
@@ -44,11 +37,21 @@ const aumentarCantidadCurso = (id) => {
 }
 
 
+// Eliminar curso
+const eliminarCurso = (event) => {
+  if (event.target.classList.contains('borrar-curso')) {
+    const cursoId = event.target.getAttribute('data-id');
+    listaDeCursos = listaDeCursos.filter(curso => curso.id !== cursoId);
+    listarCursos();
+  }
+};
+
+
 // cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
-
   // Obtener curso
   listaCursosElement.addEventListener('click', init);
+  carritoElement.addEventListener('click', eliminarCurso);
 });
 
 
