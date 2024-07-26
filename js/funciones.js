@@ -53,6 +53,9 @@ const listarCursos = () => {
 };
 
 
+// Actualizar storage
+const actualizarStorage = () => localStorage.setItem('cursos', JSON.stringify(listaDeCursos));
+
 // Verificar si el curso ya fue agregado
 const verificarCurso = (curso) => listaDeCursos.some(cursoExistente => cursoExistente.id === curso.id);
 
@@ -67,5 +70,6 @@ const limpiarHtml = () => {
 export {
   obtenerCurso,
   verificarCurso,
-  listarCursos
+  listarCursos,
+  actualizarStorage
 }

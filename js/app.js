@@ -1,10 +1,10 @@
 // Importar modulos
 import { carritoElement, listaCursosElement } from "./elemtos.js";
-import { listarCursos, obtenerCurso, verificarCurso, } from "./funciones.js";
+import { actualizarStorage, listarCursos, obtenerCurso, verificarCurso, } from "./funciones.js";
 
 
 // Variables
-let listaDeCursos = [];
+let listaDeCursos = JSON.parse(localStorage.getItem('cursos')) || [];
 
 
 // funcion que inicia la aplicación
@@ -24,6 +24,9 @@ const init = (event) => {
 
   // listar cursos en el carrito de compras 
   listarCursos();
+
+  // actualizar storage
+  actualizarStorage();
 };
 
 
@@ -39,11 +42,16 @@ const aumentarCantidadCurso = (id) => {
 
 // Eliminar curso
 const eliminarCurso = (event) => {
+  event.preventDefault();
+
   if (event.target.classList.contains('borrar-curso')) {
     const cursoId = event.target.getAttribute('data-id');
     listaDeCursos = listaDeCursos.filter(curso => curso.id !== cursoId);
     listarCursos();
   }
+
+  // actualizar storage
+  actualizarStorage();
 };
 
 
@@ -52,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Obtener curso
   listaCursosElement.addEventListener('click', init);
   carritoElement.addEventListener('click', eliminarCurso);
+  listarCursos();
 });
 
 
