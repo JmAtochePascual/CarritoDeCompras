@@ -5,7 +5,7 @@ import {
 
 import {
   obtenerCurso,
-  verificarCurso
+  verificarCurso,
 } from "./funciones.js";
 
 
@@ -22,7 +22,13 @@ const init = (event) => {
   // verificar si el curso ya fue agregado
   const existeCurso = verificarCurso(curso);
 
+  existeCurso ? null : agregarCurso(curso);
 };
+
+
+// Agregar curso al carrito
+const agregarCurso = (curso) => listaDeCursos = [...listaDeCursos, curso];
+
 
 // cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
