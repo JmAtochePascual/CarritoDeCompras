@@ -1,5 +1,5 @@
 // Importar modulos
-import { carritoElement, listaCursosElement } from "./elemtos.js";
+import { botonVaciarCarritoElement, carritoElement, listaCursosElement } from "./elemtos.js";
 import { actualizarStorage, listarCursos, obtenerCurso, verificarCurso, } from "./funciones.js";
 
 
@@ -55,12 +55,22 @@ const eliminarCurso = (event) => {
 };
 
 
+// Vaciar carrito
+const vaciarCarrito = () => {
+  listaDeCursos = [];
+  listarCursos();
+  actualizarStorage();
+};
+
+
 // cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
   // Obtener curso
+  listarCursos();
+
   listaCursosElement.addEventListener('click', init);
   carritoElement.addEventListener('click', eliminarCurso);
-  listarCursos();
+  botonVaciarCarritoElement.addEventListener('click', vaciarCarrito);
 });
 
 
