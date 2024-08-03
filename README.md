@@ -57,6 +57,6 @@ Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
 ## 🌐 Ver Proyecto en la WEB
 
-Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepacual.github.io/CarritoDeCompras).
+Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/CarritoDeCompras/).
 
 Todos los derechos reservados Carrito de Compras 2024 ©.
