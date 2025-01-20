@@ -1,46 +1,68 @@
 # ⚡️ Carrito de Compras
 
-Este proyecto implementa un carrito de compras simple y efectivo para una tienda de cursos en línea. Utiliza HTML, CSS y JavaScript puro para manejar las interacciones del usuario y el estado del carrito de compras.
-
-## 🎯 Contenido
-
-1. 📝[Descripción](#descripción)
-2. 🛠️[Tecnologías y Herramientas](#tecnologías-y-herramientas)
-3. 🚀[Estructura del Proyecto](#estructura-del-proyecto)
-4. 🧑‍💻[Uso](#uso)
-5. 📌[Instalación](#instalaciónn)
-6. 🏗️[Contribución](#contribución)
-7. ✨[Licencia](#licencia)
-8. 🙈[Imagen de Referencia](#imagen-de-rereferencia)
-9. 🌐[Ver Proyecto en la WEB](#ver-proyecto-en-la-web)
-
-## Descripción
-
-Este proyecto implementa un carrito de compras simple y efectivo para una tienda de cursos en línea. Utiliza HTML, CSS y JavaScript puro para manejar las interacciones del usuario y el estado del carrito de compras.
+Este proyecto implementa un carrito de compras interactivo y dinámico para una tienda de cursos en línea. Desarrollado con JavaScript modular, el proyecto utiliza el almacenamiento local (localStorage) para persistir los datos del carrito entre sesiones. La interfaz permite agregar cursos, aumentar cantidades automáticamente para cursos duplicados, eliminar cursos individuales y vaciar completamente el carrito. Todo el estado se maneja de forma eficiente mediante funciones especializadas y eventos del DOM.
 
 ## Características
 
-- **Agregar cursos al carrito:** Los usuarios pueden añadir cursos de su interés al carrito de compras con solo un clic.
-- **Eliminar cursos del carrito:** Cada curso puede ser eliminado individualmente del carrito.
-- **Vaciar el carrito:** Existe la opción de eliminar todos los cursos del carrito simultáneamente.
-- **Conteo de cursos:** El carrito mantiene una cuenta de los cursos y actualiza la cantidad si se añade el mismo curso más de una vez.
-- **Interfaz responsiva:** Compatible con dispositivos móviles y desktop gracias a Skeleton CSS.
+- **Gestión de Cursos:**
+  - Agregar cursos al carrito con un solo clic
+  - Eliminar cursos individualmente
+  - Vaciar todo el carrito de una vez
+  - Sistema inteligente de conteo que actualiza cantidades automáticamente
+- **Persistencia de Datos:** Almacenamiento local para mantener el carrito entre sesiones
+- **Interfaz Moderna:**
+  - Diseño responsivo con Skeleton CSS
+  - Experiencia fluida en móviles y desktop
+  - Retroalimentación visual de acciones
+- **Arquitectura Modular:**
+  - Código JavaScript organizado en módulos
+  - Funciones especializadas para cada operación
+  - Manejo eficiente del estado
 
 ## Tecnologías y Herramientas
 
-- **HTML:** Estructura de la página.
-- **CSS:** Estilos de la página utilizando Normalize.css y Skeleton CSS para un diseño responsivo.
-- **JavaScript:** Lógica para las interacciones del carrito de compras.
+- **HTML5:** Estructura semántica y moderna del documento.
+- **CSS3:**
+  - Normalize.css para resetear estilos
+  - Skeleton CSS para grid y componentes responsivos
+  - Custom CSS para estilos personalizados
+- **JavaScript ES6+:**
+  - Módulos nativos para código organizado
+  - LocalStorage API para persistencia de datos
+  - Manipulación avanzada del DOM
+  - Event handling y delegación de eventos
 
 ## Estructura del Proyecto
 
-- **css/**: Carpeta con los estilos compilados.
-- **js/**: Carpeta código con lógica del proyecto.
-- **index.html**: Página principal.
+- **css/**:
+  - **normalize.css**: Reset de estilos CSS
+  - **skeleton.css**: Framework CSS minimalista
+  - **custom.css**: Estilos personalizados
+- **js/**:
+  - **app.js**: Lógica principal y estado de la aplicación
+  - **elementos.js**: Referencias a elementos del DOM
+  - **funciones.js**: Funciones utilitarias
+- **index.html**: Página principal con la interfaz del carrito
 
 ## Uso
 
-Abrir el archivo index.html en un navegador de su elección.
+Para visualizar el proyecto localmente, sigue estos pasos:
+
+1. Clona este repositorio:
+
+```
+git clone https://github.com/JMatochePascual/CarritoDeCompras.git
+```
+
+2. Navega al directorio del proyecto:
+
+```
+cd CarritoDeCompras
+```
+
+3. Abre el archivo `index.html` en tu navegador web preferido
+
+4. Opcionalmente, puedes usar un servidor local como Live Server para una mejor experiencia
 
 ## Instalación
 
@@ -48,13 +70,23 @@ No se requiere instalación adicional para utilizar este proyecto.
 
 ## Contribución
 
-Si estás interesado en contribuir al proyecto, por favor sigue estos pasos:
+Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu característica (`git checkout -b mi-nueva-característica`).
-3. Compromete tus cambios (`git commit -am 'Añadir alguna característica'`).
-4. Empuja la rama (`git push origin mi-nueva-característica`).
-5. Abre un pull request.
+
+2. Crea una nueva rama para tu funcionalidad:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Realiza y confirma tus cambios:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. Sube los cambios a tu repositorio:
+   ```bash
+   git push origin feature-name
+   ```
+5. Abre un Pull Request desde tu repositorio hacia el proyecto principal
 
 ## Licencia
 
@@ -62,10 +94,10 @@ Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
 ## Imagen de Rereferencia
 
-![](https://i.postimg.cc/rFbhH1wf/Carrito-de-compras.png)
+![](https://i.postimg.cc/Y9Zt2Mt1/Carrito-De-Compras.png)
 
-## Ver Proyecto en la WEB
+## ¡Visita Nuestro Proyecto!
 
-Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/CarritoDeCompras/).
+¿Quieres ver Carrito de Compras en acción? ¡Haz clic aquí! 👉 [Visitar Carrito de Compras](https://jmatochepascual.github.io/CarritoDeCompras/)
 
-Todos los derechos reservados Carrito de Compras 2024 ©.
+Hecho con 💚 por JMCode | ©2025 - Transformando tu experiencia de compra en línea.
