@@ -1,48 +1,37 @@
-# ⚡️ Carrito de Compras
+# Carrito de Compras
 
 Este proyecto implementa un carrito de compras interactivo y dinámico para una tienda de cursos en línea. Desarrollado con JavaScript modular, el proyecto utiliza el almacenamiento local (localStorage) para persistir los datos del carrito entre sesiones. La interfaz permite agregar cursos, aumentar cantidades automáticamente para cursos duplicados, eliminar cursos individuales y vaciar completamente el carrito. Todo el estado se maneja de forma eficiente mediante funciones especializadas y eventos del DOM.
 
 ## Características
 
-- **Gestión de Cursos:**
-  - Agregar cursos al carrito con un solo clic
-  - Eliminar cursos individualmente
-  - Vaciar todo el carrito de una vez
-  - Sistema inteligente de conteo que actualiza cantidades automáticamente
-- **Persistencia de Datos:** Almacenamiento local para mantener el carrito entre sesiones
-- **Interfaz Moderna:**
-  - Diseño responsivo con Skeleton CSS
-  - Experiencia fluida en móviles y desktop
-  - Retroalimentación visual de acciones
-- **Arquitectura Modular:**
-  - Código JavaScript organizado en módulos
-  - Funciones especializadas para cada operación
-  - Manejo eficiente del estado
+- Agregar cursos al carrito
+- Eliminar cursos individualmente
+- Vaciar todo el carrito de una vez
+- Sistema inteligente de conteo que actualiza cantidades automáticamente
+- Persistencia de Datos Almacenamiento local para mantener el carrito entre sesiones
+- Diseño responsivo con Skeleton CSS
+- Experiencia fluida en móviles y desktop
+- Retroalimentación visual de acciones
 
-## Tecnologías y Herramientas
+## Tecnologías
 
-- **HTML5:** Estructura semántica y moderna del documento.
-- **CSS3:**
-  - Normalize.css para resetear estilos
-  - Skeleton CSS para grid y componentes responsivos
-  - Custom CSS para estilos personalizados
-- **JavaScript ES6+:**
-  - Módulos nativos para código organizado
-  - LocalStorage API para persistencia de datos
-  - Manipulación avanzada del DOM
-  - Event handling y delegación de eventos
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+- HTML5: Lenguaje para estructurar semánticamente el contenido de una página web.
+- CSS3: Lenguaje para definir la presentación visual y el diseño responsivo.
+- JavaScript ES6+: Lenguaje para implementar lógica e interactividad en aplicaciones web.
 
 ## Estructura del Proyecto
 
-- **css/**:
-  - **normalize.css**: Reset de estilos CSS
-  - **skeleton.css**: Framework CSS minimalista
-  - **custom.css**: Estilos personalizados
-- **js/**:
-  - **app.js**: Lógica principal y estado de la aplicación
-  - **elementos.js**: Referencias a elementos del DOM
-  - **funciones.js**: Funciones utilitarias
-- **index.html**: Página principal con la interfaz del carrito
+- **css/:** Carpeta que contiene los archivos responsables de los estilos y la presentación visual del sitio web.
+- **js/:** Carpeta que contiene los archivos JavaScript encargados de la lógica y funcionalidad del sitio.
+- **index.html:** Archivo principal que define la estructura y contenido base de la interfaz del carrito de compras.
+
+## Instlaciones
+
+> Para trabajar con este proyecto, no se requiere instalaciones:
 
 ## Uso
 
@@ -64,15 +53,11 @@ cd CarritoDeCompras
 
 4. Opcionalmente, puedes usar un servidor local como Live Server para una mejor experiencia
 
-## Instalación
-
-No se requiere instalación adicional para utilizar este proyecto.
-
 ## Contribución
 
 Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
-1. Haz un fork del repositorio.
+1. Haz un fork del repositorio
 
 2. Crea una nueva rama para tu funcionalidad:
    ```bash
@@ -90,14 +75,6 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 ## Licencia
 
-Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+Este proyecto se encuentra disponible bajo la licencia MIT. Puedes consultar los términos completos [aquí](https://opensource.org/licenses/MIT).
 
-## Imagen de Rereferencia
-
-![](https://i.postimg.cc/Y9Zt2Mt1/Carrito-De-Compras.png)
-
-## ¡Visita Nuestro Proyecto!
-
-¿Quieres ver Carrito de Compras en acción? ¡Haz clic aquí! 👉 [Visitar Carrito de Compras](https://jmatochepascual.github.io/CarritoDeCompras/)
-
-Hecho con 💚 por JMCode | ©2025 - Transformando tu experiencia de compra en línea.
+Desarrollado con 💚 por JMCode | © 2025 - Transformando ideas en soluciones digitales
